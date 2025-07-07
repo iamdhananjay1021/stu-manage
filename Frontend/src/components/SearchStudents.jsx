@@ -9,7 +9,7 @@ const SearchStudents = () => {
   const handleSearch = async () => {
     if (!query.trim()) return;
     try {
-      const response = await fetch(`http://localhost:4000/api/v1/students/search?name=${query}`);
+      const response = await fetch(`https://student-manage-6ikm.onrender.com/api/v1/students/search?name=${query}`);
       const data = await response.json();
       setStudents(data.students);
       if (data.students.length === 0) {
