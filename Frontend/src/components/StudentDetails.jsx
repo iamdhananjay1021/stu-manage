@@ -8,7 +8,7 @@ const StudentDetails = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/api/v1/student/${id}`);
+        const response = await fetch(`https://student-manage-6ikm.onrender.com/api/v1/student/${id}`);
         const data = await response.json();
         setStudent(data);
       } catch (error) {
