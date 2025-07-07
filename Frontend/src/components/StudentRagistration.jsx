@@ -18,7 +18,7 @@ function StudentRegistration() {
 
 	const registerStudent = async (formData) => {
 		try {
-			const response = await fetch("http://localhost:4000/api/v1/registration", {
+			const response = await fetch("https://student-manage-6ikm.onrender.com/api/v1/registration", {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(formData)
