@@ -9,7 +9,7 @@ const StudentList = () => {
 
 	const fetchStudents = async () => {
 		try {
-			const response = await fetch("http://localhost:4000/api/v1/student");
+			const response = await fetch("https://student-manage-6ikm.onrender.com/api/v1/student");
 			const data = await response.json();
 			dispatch(setStudents(data.data));
 		} catch (error) {
@@ -19,7 +19,7 @@ const StudentList = () => {
 
 	const handleRemove = async (id) => {
 		try {
-			const response = await fetch("http://localhost:4000/api/v1/student/delete", {
+			const response = await fetch("https://student-manage-6ikm.onrender.com/api/v1/student/delete", {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ id })
