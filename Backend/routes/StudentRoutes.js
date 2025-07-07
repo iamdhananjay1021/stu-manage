@@ -1,6 +1,6 @@
 const express = require("express");
 const {studentRegistration, searchStudent, studentList, deleteStudent,studentDetails } = require("../controllers/studentControllers");
-const validateStudent = require("../middleware/Auth");
+const validateStudent = require("../middleware/auth");
 const router = express.Router();
 
 router.post("/registration", validateStudent, studentRegistration);
